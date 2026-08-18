@@ -90,7 +90,3 @@ Everything else fixed (depth, filter counts, stride, padding, activations, pooli
 **What inductive bias does convolution introduce?** That a useful local pattern is worth detecting the same way regardless of where it appears — weight sharing — plus locality, the assumption that nearby pixels are more related than distant ones. Both are visible directly in the parameter counts: 448 weights for the first conv layer vs. 17.28 million for the baseline's first dense layer, covering the same input.
 
 **Where would convolution not be appropriate?** Anywhere there's no meaningful, consistent spatial neighborhood for a kernel to slide across: tabular data (reordering columns doesn't change their meaning), graph-structured data (no fixed grid), problems where absolute position *is* the signal (a fixed-layout form), or data with long-range dependencies that don't decay with distance (which is part of why attention, not convolution, is the default for language).
-
-## Status
-
-Sections 1–5 of the assignment are done in the notebook. **SageMaker training/deployment (section 6) is still pending.**
